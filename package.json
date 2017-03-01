@@ -1,0 +1,50 @@
+{
+  "name": "angular2_boilerplate",
+  "version": "1.0.0",
+  "description": "Angular 2 Boilerplate with SystemJS and minimal dependancies.",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\"",
+    "vendor": "npm run removeVendor && mkdir ./app/vendor && npm run addAngular && npm run addCorejs && npm run addReflectMetadata && npm run addRxjs && npm run addSystemjs && npm run addZonejs",
+
+    "addAngular": "cp -ap ./node_modules/@angular ./app/vendor",
+    "addCorejs": "mkdir ./app/vendor/core-js && cp -ap ./node_modules/core-js/client/* ./app/vendor/core-js",
+    "addReflectMetadata": "cp -ap ./node_modules/reflect-metadata ./app/vendor",
+    "addRxjs": "cp -ap ./node_modules/rxjs ./app/vendor",
+    "addSystemjs": "mkdir ./app/vendor/systemjs && cp -ap ./node_modules/systemjs/dist/* ./app/vendor/systemjs",
+    "addZonejs" : "mkdir ./app/vendor/zone.js && cp -ap ./node_modules/zone.js/dist/* ./app/vendor/zone.js",
+    "removeVendor": "rm -rf ./app/vendor",
+
+    "postinstall": "typings install && npm run vendor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:ognjenjevremovic/angular2_boilerplate.git"
+  },
+  "author": "Ognjen Jevremovic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ognjenjevremovic/angular2_boilerplate/issues"
+  },
+  "homepage": "https://github.com/ognjenjevremovic/angular2_boilerplate#readme",
+  "dependencies": {
+    "@angular/common": "^2.4.8",
+    "@angular/compiler": "^2.4.8",
+    "@angular/core": "^2.4.8",
+    "@angular/forms": "^2.4.8",
+    "@angular/http": "^2.4.8",
+    "@angular/platform-browser": "^2.4.8",
+    "@angular/platform-browser-dynamic": "^2.4.8",
+    "@angular/router": "^3.4.8",
+
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.2.0",
+    "systemjs": "^0.20.9",
+    "zone.js": "^0.7.7"
+  },
+  "devDependencies": {
+    "concurrently": "^3.3.0",
+    "lite-server": "^2.2.2"
+  }
+}
