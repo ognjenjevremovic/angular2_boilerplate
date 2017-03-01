@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Base root url -->
+    <base href="/" >
+
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
+    <meta name="author" content="Ognjen Jevremovic">
+
+    <!-- Name -->
+    <title>Angular 2 Boilerplate</title>
+
+    <!-- Styles -->
+    <!--<link rel="stylesheet" href="static/css">-->
+</head>
+<body>
+
+    <!-- Application root component -->
+    <ng-app>
+        Loading. . .
+    </ng-app>
+
+
+    <!-- Angular 2 dependacies -->
+    <script src="app/vendor/core-js/shim.min.js"></script>
+    <script src="app/vendor/reflect-metadata/Reflect.js"></script>
+    <script src="app/vendor/zone.js/zone.min.js"></script>
+
+    <!-- SystemJS -->
+    <script src="app/vendor/systemjs/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System
+            .import('app')
+            .catch(function(error) {
+                console.log(error);
+            });
+    </script>
+</body>
+</html>
