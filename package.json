@@ -15,7 +15,7 @@
     "addZonejs" : "mkdir ./app/vendor/zone.js && cp -ap ./node_modules/zone.js/dist/* ./app/vendor/zone.js",
     "removeVendor": "rm -rf ./app/vendor",
 
-    "postinstall": "typings install && npm run vendor"
+    "postinstall": "npm run vendor"
   },
   "repository": {
     "type": "git",

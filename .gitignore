@@ -38,4 +38,7 @@ jspm_packages
 
 # vendor libraries
 app/vendor
-typings/*
+
+# compiled javascript
+**/app/**/*.js
+**/app/**/*.map
