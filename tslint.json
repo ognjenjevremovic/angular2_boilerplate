@@ -1,101 +1,97 @@
 {
-    "jsRules": {
-        "class-name": true,
-        "comment-format": [
+    "rules" : {
+        "no-any" : true,
+        "no-empty-interface": true,
+        "only-arrow-functions": [
             true,
-            "check-space"
+            "allow-declarations"
         ],
-        "indent": [
-            true,
-            "spaces"
-        ],
+        "prefer-for-of": true,
+        "no-for-in-array": true,
+        "no-construct": true,
+        "no-duplicate-super": true,
         "no-duplicate-variable": true,
-        "no-eval": true,
-        "no-trailing-whitespace": true,
-        "no-unsafe-finally": true,
-        "one-line": [
+        "no-empty": true,
+        "no-invalid-this": true,
+        "no-unused-variable": [
             true,
-            "check-open-brace",
-            "check-whitespace"
+            "react",
+            { "ignore_pattern": "^_" }
         ],
-        "quotemark": [
-            true,
-            "single"
-        ],
-        "semicolon": [
-            true,
-            "always"
-        ],
-        "triple-equals": [
-            true,
-            "allow-null-check"
-        ],
-        "variable-name": [
-            true,
-            "ban-keywords"
-        ],
-        "whitespace": [
-            true,
-            "check-branch",
-            "check-decl",
-            "check-operator",
-            "check-separator",
-            "check-type"
-        ]
-    },
-    "rules": {
-        "class-name": true,
-        "comment-format": [
-            true,
-            "check-space"
-        ],
+        "no-use-before-declare": true,
+        "no-var-keyword": true,
+        "restrict-plus-operands": true,
+        "strict-type-predicates": true,
+        "switch-default": true,
+        "triple-equals": true,
+        "typeof-compare": true,
+        "use-isnan": true,
+        "eofline": true,
         "indent": [
             true,
             "spaces"
         ],
-        "no-eval": true,
-        "no-internal-module": true,
-        "no-trailing-whitespace": true,
-        "no-unsafe-finally": true,
-        "no-var-keyword": true,
-        "one-line": [
+        "no-require-imports": true,
+        "prefer-const": true,
+        "trailing-comma": [
             true,
-            "check-open-brace",
-            "check-whitespace"
+            { "multiline": "never", "singleline": "never" }
         ],
+        "arrow-return-shorthand": [
+            true
+        ],
+        "class-name": true,
+        "comment-format": [
+            true,
+            { "ignore-words": [ "TODO" ] }
+        ],
+        "interface-name": [
+            true,
+            "always-prefix"
+        ],
+        "interface-over-type-literal": true,
+        "no-angle-bracket-type-assertion": true,
+        "no-boolean-literal-compare": true,
+        "no-consecutive-blank-lines": [
+            true,
+            2
+        ],
+        "no-trailing-whitespace": true,
+        "object-literal-shorthand": true,
+        "one-variable-per-declaration": [ true ],
+        "prefer-method-signature": true,
         "quotemark": [
             true,
-            "single"
+            "single",
+            "avoid-escape"
         ],
         "semicolon": [
             true,
             "always"
         ],
-        "triple-equals": [
+        "space-before-function-paren": [
             true,
-            "allow-null-check"
-        ],
-        "typedef-whitespace": [
-            true,
-            {
-                "call-signature": "nospace",
-                "index-signature": "nospace",
-                "parameter": "nospace",
-                "property-declaration": "nospace",
-                "variable-declaration": "nospace"
-            }
+            { "anonymous": "never", "named": "never", "asyncArrow": "always", "method": "never", "constructor": "never" }
         ],
         "variable-name": [
             true,
-            "ban-keywords"
+            "ban-keywords",
+            "check-format",
+            "allow-leading-underscore",
+            "allow-pascal-case"
         ],
-        "whitespace": [
+        "max-file-line-count": [
             true,
-            "check-branch",
-            "check-decl",
-            "check-operator",
-            "check-separator",
-            "check-type"
-        ]
+            280     //  general rule of thumb for code maintainability
+        ],
+        "max-line-length": [
+            true,
+            160     //  no lengthy ternaries 
+        ],
+        "align": [
+            true,
+            "statements"
+        ],
+        "newline-before-return": true
     }
 }
