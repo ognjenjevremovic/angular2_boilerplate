@@ -12,7 +12,7 @@
     "addReflectMetadata": "cp -ap ./node_modules/reflect-metadata ./app/vendor",
     "addRxjs": "cp -ap ./node_modules/rxjs ./app/vendor",
     "addSystemjs": "mkdir ./app/vendor/systemjs && cp -ap ./node_modules/systemjs/dist/* ./app/vendor/systemjs",
-    "addZonejs" : "mkdir ./app/vendor/zone.js && cp -ap ./node_modules/zone.js/dist/* ./app/vendor/zone.js",
+    "addZonejs": "mkdir ./app/vendor/zone.js && cp -ap ./node_modules/zone.js/dist/* ./app/vendor/zone.js",
     "removeVendor": "rm -rf ./app/vendor",
 
     "postinstall": "npm run vendor"
@@ -37,6 +37,9 @@
     "@angular/platform-browser-dynamic": "^2.4.8",
     "@angular/router": "^3.4.8",
 
+    "@types/core-js": "^0.9.35",
+    "@types/node": "^7.0.5",
+    
     "core-js": "^2.4.1",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.2.0",
