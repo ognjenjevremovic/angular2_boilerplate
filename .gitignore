@@ -39,6 +39,5 @@ jspm_packages
 # vendor libraries
 app/vendor
 
-# compiled javascript
-**/app/**/*.js
-**/app/**/*.map
+# custom
+.vscode

@@ -2,14 +2,22 @@
     "compilerOptions": {
         "module": "commonjs",
         "target": "es5",
-        "moduleResolution": "node",
+        "pretty": true,
         "noImplicitAny": true,
         "suppressImplicitAnyIndexErrors": true,
         "sourceMap": true,
-        "removeComments": true,
+        "removeComments": false,
         "alwaysStrict": true,
+        "declaration": true,
         "emitDecoratorMetadata": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "lib": [
+            "es5",
+            "es6",
+            "es7",
+            "dom",
+            "dom.iterable"
+        ]
     },
     "exclude": [
         "node_modules/",

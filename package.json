@@ -1,10 +1,11 @@
 {
   "name": "angular2_boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angular 2 Boilerplate with SystemJS and minimal dependancies.",
   "main": "index.js",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\"",
+
     "vendor": "npm run removeVendor && mkdir ./app/vendor && npm run addAngular && npm run addCorejs && npm run addReflectMetadata && npm run addRxjs && npm run addSystemjs && npm run addZonejs",
 
     "addAngular": "cp -ap ./node_modules/@angular ./app/vendor",
@@ -14,7 +15,7 @@
     "addSystemjs": "mkdir ./app/vendor/systemjs && cp -ap ./node_modules/systemjs/dist/* ./app/vendor/systemjs",
     "addZonejs": "mkdir ./app/vendor/zone.js && cp -ap ./node_modules/zone.js/dist/* ./app/vendor/zone.js",
     "removeVendor": "rm -rf ./app/vendor",
-
+    
     "postinstall": "npm run vendor"
   },
   "repository": {
@@ -37,9 +38,6 @@
     "@angular/platform-browser-dynamic": "^2.4.8",
     "@angular/router": "^3.4.8",
 
-    "@types/core-js": "^0.9.35",
-    "@types/node": "^7.0.5",
-    
     "core-js": "^2.4.1",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.2.0",
@@ -48,6 +46,9 @@
   },
   "devDependencies": {
     "concurrently": "^3.3.0",
-    "lite-server": "^2.2.2"
+    "lite-server": "^2.2.2",
+
+    "@types/core-js": "^0.9.35",
+    "@types/node": "^7.0.5"
   }
 }
