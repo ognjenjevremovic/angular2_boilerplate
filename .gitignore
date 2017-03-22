@@ -37,7 +37,7 @@ jspm_packages
 .node_repl_history
 
 # vendor libraries
-app/vendor
+src/lib
 
 # custom
 .vscode

@@ -2,17 +2,26 @@
 Angular 2 Boilerplate with SystemJS and minimal dependancies.
 
 ### Clone the repo
-cd into directory
-
-### Install dependancies
-To install dependancies.
 ```sh
-$ npm install
+$ git clone https://github.com/ognjenjevremovic/ng2-boilerplate
 ```
-Typing definitions and all the vendor libraries (Angular 2 dependancy libraries and Angular 2 modules) will be created for you, after you run npm install.
 
-### Start the server
+### Go to the directory
 ```sh
-$ npm start
+$ cd ng2_boilerplate
 ```
-To compile TypeScript files, start the live-server and watch the files for change.
+
+### Install dependancies and start the application
+```sh
+$ npm install && npm start
+```
+
+&nbsp;
+
+### Found a bug?
+Please open an [issue](https://github.com/ognjenjevremovic/ng2-boilerplate/issues).
+
+### License
+Copyright (c) 2017 [Ognjen Jevremović](https://github.com/ognjenjevremovic)
+
+Licensed under the [MIT](https://github.com/ognjenjevremovic/ng2-boilerplate/blob/master/LICENSE) License.

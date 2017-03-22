@@ -1,20 +1,22 @@
 {
   "name": "angular2_boilerplate",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Angular 2 Boilerplate with SystemJS and minimal dependancies.",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"lite-server\"",
-
-    "vendor": "npm run removeVendor && mkdir ./app/vendor && npm run addAngular && npm run addCorejs && npm run addReflectMetadata && npm run addRxjs && npm run addSystemjs && npm run addZonejs",
-
-    "addAngular": "cp -ap ./node_modules/@angular ./app/vendor",
-    "addCorejs": "mkdir ./app/vendor/core-js && cp -ap ./node_modules/core-js/client/* ./app/vendor/core-js",
-    "addReflectMetadata": "cp -ap ./node_modules/reflect-metadata ./app/vendor",
-    "addRxjs": "cp -ap ./node_modules/rxjs ./app/vendor",
-    "addSystemjs": "mkdir ./app/vendor/systemjs && cp -ap ./node_modules/systemjs/dist/* ./app/vendor/systemjs",
-    "addZonejs": "mkdir ./app/vendor/zone.js && cp -ap ./node_modules/zone.js/dist/* ./app/vendor/zone.js",
-    "removeVendor": "rm -rf ./app/vendor",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    
+    "start": "npm run tsc && concurrently \"npm run tsc:w\" \"lite-server\"",
+    
+    "vendor": "npm run purgeVendor && mkdir src/lib && npm run addAngular && npm run addCorejs && npm run addRxjs && npm run addSystemjs && npm run addZonejs",
+    "addAngular": "cp -ap node_modules/@angular src/lib",
+    "addCorejs": "mkdir src/lib/core-js && cp -ap node_modules/core-js/client/* src/lib/core-js",
+    "addRxjs": "cp -ap node_modules/rxjs src/lib",
+    "addSystemjs": "mkdir src/lib/systemjs && cp -ap node_modules/systemjs/dist/* src/lib/systemjs",
+    "addZonejs": "mkdir src/lib/zone.js && cp -ap node_modules/zone.js/dist/* src/lib/zone.js",
+    
+    "purgeVendor": "rm -rf src/lib/",
     
     "postinstall": "npm run vendor"
   },
@@ -29,26 +31,25 @@
   },
   "homepage": "https://github.com/ognjenjevremovic/angular2_boilerplate#readme",
   "dependencies": {
-    "@angular/common": "^2.4.8",
-    "@angular/compiler": "^2.4.8",
-    "@angular/core": "^2.4.8",
-    "@angular/forms": "^2.4.8",
-    "@angular/http": "^2.4.8",
-    "@angular/platform-browser": "^2.4.8",
-    "@angular/platform-browser-dynamic": "^2.4.8",
-    "@angular/router": "^3.4.8",
-
+    "@angular/common": "^2.4.10",
+    "@angular/compiler": "^2.4.10",
+    "@angular/core": "^2.4.10",
+    "@angular/forms": "^2.4.10",
+    "@angular/http": "^2.4.10",
+    "@angular/platform-browser": "^2.4.10",
+    "@angular/platform-browser-dynamic": "^2.4.10",
+    "@angular/router": "^3.4.10",
+    "@angular/upgrade": "^2.4.10",
     "core-js": "^2.4.1",
-    "reflect-metadata": "^0.1.10",
     "rxjs": "^5.2.0",
-    "systemjs": "^0.20.9",
-    "zone.js": "^0.7.7"
+    "systemjs": "^0.20.10",
+    "zone.js": "^0.7.8"
   },
   "devDependencies": {
-    "concurrently": "^3.3.0",
-    "lite-server": "^2.2.2",
-
-    "@types/core-js": "^0.9.35",
-    "@types/node": "^7.0.5"
+    "@types/core-js": "^0.9.37",
+    "@types/node": "^7.0.8",
+    "concurrently": "^3.4.0",
+    "lite-server": "^2.3.0",
+    "typescript": "^2.2.1"
   }
 }

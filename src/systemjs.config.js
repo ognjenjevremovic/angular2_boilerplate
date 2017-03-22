@@ -3,8 +3,8 @@
 
     System.config({
         paths: {
-            'vendor:'   : 'app/vendor/',
-            '@angular:' : 'vendor:@angular/'
+            'lib:'   : 'lib/',
+            '@angular:' : 'lib:@angular/'
         },
         map: {
             //  Application
@@ -21,11 +21,11 @@
             '@angular/platform-browser-dynamic' :   '@angular:platform-browser-dynamic/bundles/platform-browser-dynamic.umd.min.js',
             
             //  Rxjs
-            'rxjs'  : 'vendor:rxjs'
+            'rxjs'  : 'lib:rxjs'
         },
         packages: {
             app: {
-                main : './main.js',
+                main : 'main.js',
                 defaultExtension : 'js'
             },
             rxjs : {
